@@ -1,7 +1,8 @@
 // preview.tsx
 // copy the content from .ondevice preview.tsx
-
+import React from "react";
 import type { Preview } from "@storybook/react";
+import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider/index.web";
 import "../global.css";
 
 const preview: Preview = {
@@ -13,6 +14,15 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => {
+      return (
+        <GluestackUIProvider>
+          <Story />
+        </GluestackUIProvider>
+      );
+    },
+  ],
 };
 
 export default preview;

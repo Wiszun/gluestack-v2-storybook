@@ -12,13 +12,16 @@
     "lint": "expo lint",
     "storybook:web": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storybook-generate": "sb-rn-get-stories --config-path .ondevice"
+    "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
+    "postinstall": "patch-package"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
+    "@gluestack-ui/nativewind-utils": "^1.0.23",
+    "@gluestack-ui/toast": "^1.0.7",
     "@react-navigation/native": "^6.0.2",
     "expo": "~51.0.25",
     "expo-constants": "~16.0.2",

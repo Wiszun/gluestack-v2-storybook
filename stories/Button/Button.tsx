@@ -13,7 +13,7 @@ export const MyButton = ({ onPress, text }: MyButtonProps) => {
       activeOpacity={0.8}
     >
       <Text style={styles.text} className="bg-blue-500">
-        {text}xD
+        {text}
       </Text>
     </TouchableOpacity>
   );
