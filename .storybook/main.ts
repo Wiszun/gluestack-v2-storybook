@@ -1,7 +1,8 @@
 const main = {
     stories: [
-      "../stories/**/*.stories.mdx",
       "../stories/**/*.stories.?(ts|tsx|js|jsx)",
+      "../stories/Button/Button.stories.tsx",
+      "../stories/**/*.stories.mdx",
     ],
     addons: [
       "@storybook/addon-links",

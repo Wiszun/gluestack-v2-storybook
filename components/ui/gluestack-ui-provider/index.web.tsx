@@ -6,7 +6,7 @@ import { ToastProvider } from "@gluestack-ui/toast";
 import { setFlushStyles } from "@gluestack-ui/nativewind-utils/flush";
 
 const styleTagId = "gluestack-ui-nativewind";
-const createStyle = (styleTagId: string) => {
+const createStyle = (styleTagId: any) => {
   let style = document.createElement("style");
   style.id = styleTagId;
   style.appendChild(document.createTextNode(""));
@@ -18,7 +18,7 @@ export function GluestackUIProvider({
   ...props
 }: {
   mode?: "light" | "dark";
-  children?: React.ReactNode;
+  children?: any;
 }) {
   const stringcssvars = Object.keys(config[mode]).reduce((acc, cur) => {
     acc += `${cur}:${config[mode][cur]};`;
@@ -45,5 +45,9 @@ export function GluestackUIProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
-  return <div>{props.children}</div>;
+  return (
+    <OverlayProvider>
+      <ToastProvider>{props.children}</ToastProvider>
+    </OverlayProvider>
+  );
 }
