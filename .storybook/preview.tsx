@@ -1,11 +1,11 @@
 // preview.tsx
 // copy the content from .ondevice preview.tsx
 import React from "react";
-import type { Preview } from "@storybook/react";
-import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider/index.web";
+// import type { Preview } from "@storybook/react";
+import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider";
 import "../global.css";
 
-const preview: Preview = {
+const preview = {
   parameters: {
     controls: {
       matchers: {

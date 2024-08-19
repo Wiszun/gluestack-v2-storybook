@@ -1,6 +1,6 @@
 import "../global.css";
 import React from "react";
-import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider/index.web";
+import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider";
 import * as Linking from "expo-linking";
 
 let defaultTheme: "dark" | "light" = "light";
@@ -30,12 +30,11 @@ export default function App() {
 
   return (
     <>
-      <ThemeContext.Provider value={{ colorMode, toggleColorMode }}>
-        <GluestackUIProvider mode={colorMode}>
+      <GluestackUIProvider mode={colorMode}>
+        <ThemeContext.Provider value={{ colorMode, toggleColorMode }}>
           {/* bottom SafeAreaView */}
-          XDDDDD
-        </GluestackUIProvider>
-      </ThemeContext.Provider>
+        </ThemeContext.Provider>
+      </GluestackUIProvider>
     </>
   );
 }
